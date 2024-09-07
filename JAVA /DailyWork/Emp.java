@@ -11,11 +11,11 @@ class employee {
 
 	public void getinfo() {
 		System.out.println("Enter the name of the Employee: ");
-		String name = sc.nextLine();
+		 name = sc.nextLine();
 		System.out.println("Enter the Adderss (city) of the Employee :");
-		String Addr = sc.nextLine();
+		 Addr = sc.nextLine();
 		System.out.println("Enter the id of the employee: ");
-		int id = sc.nextInt();
+		 id = sc.nextInt();
 		
 
 	}
