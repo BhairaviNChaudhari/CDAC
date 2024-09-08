@@ -78,5 +78,13 @@ public class Toll {
      
     }
 }
+// Set toll rate for Cars (₹): 50
+// Set toll rate for Trucks (₹): 100
+// Set toll rate for Motorcycles (₹): 150
+// Enter the number of Cars passed: 2
+// Enter the number of Trucks passed: 3
+// Enter the number of Motorcycles passed: 4
+// Total number of vehicles that passed: 9
+// Total revenue generated: ₹1000.0
 
 
