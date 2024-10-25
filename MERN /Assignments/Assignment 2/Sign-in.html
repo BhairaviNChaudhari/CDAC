@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Sign-In</title>
+    <link rel="icon" type="image/x-icon" href="classroom_logo.jpg" id="logo">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(books-_-tv.gif);
+            background-repeat: no-repeat;
+            background-size: 35cm 20cm;
+            
+        }
+
+        .signin-container {
+            width: 420px;
+            margin-right:10in;
+            padding: 2em;
+            background-color: #767474;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            back
+        }
+
+        .signin-container h2 {
+            margin-bottom: 1em;
+            color: #ffffff;
+            font-size: 24px;
+            position: relative;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #ffffff;
+            font-size: 18px;
+            position: relative;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s, transform 0.2s ease;
+        }
+        .form-group:hover{
+            box-shadow: 0 0 3px rgba(0, 115, 230, 0.3);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #0073e6;
+            box-shadow: 0 0 3px rgba(0, 115, 230, 0.3);
+            transform: scale(1.02);
+        }
+
+        .signin-btn {
+            width: 100%;
+            padding: 0.8em;
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .signin-btn:hover {
+            background-color: #005bb5;
+            transform: translateY(-2px);
+        }
+
+        .forgot-password {
+            margin-top: 1em;
+            font-size: 0.9em;
+            color: #5e5d5d;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .forgot-password a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+            color: #005bb5;
+        }
+
+        /* Password strength pseudo-elements */
+        input[type="password"]:valid + .strength-indicator {
+            content: 'Strong Password';
+            color: green;
+            font-size: 0.9em;
+        }
+
+        input[type="password"]:invalid + .strength-indicator {
+            content: 'Weak Password';
+            color: red;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="signin-container">
+        <h2><b>Classroom Sign-In</b></h2>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required pattern=".{3,}">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="rollno">Roll Number</label>
+                <input type="text" id="rollno" name="rollno" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" >
+                <div class="strength-indicator"></div>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Re-enter Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            
+            <button type="submit" class="signin-btn" onclick="location.href='loginclassroom.html'">Sign In</button>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

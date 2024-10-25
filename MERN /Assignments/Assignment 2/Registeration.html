@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;   
+        }
+        
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+        
+        .header {
+            background-color: #E6EEF4;
+            font-weight: bold;
+        }
+        
+        input[type="text"], input[type="email"] {
+            width: 200px;
+            padding: 4px;
+        }
+        
+        .note {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .mandatory {
+            color: red;
+            font-size: 12px;
+            text-align: right;
+        }
+        tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+tr:nth-child(odd) {
+  background-color:  #c7dede;
+}
+
+#Cap{
+    height: 30px;
+    width:90px;
+}
+        .max-chars {
+            color: #666;
+            font-size: 12px;
+        }
+#submit{
+
+    border-radius: 10px;
+    padding: 2px;
+    margin-left:500px;
+    
+}
+.container
+{
+    height:fit-content;
+    margin: 20px auto;
+  
+}
+input{
+    border-radius: 10px;
+}
+body{
+
+   background-color:#4a7674;
+}
+
+    </style>
+</head>
+<body>
+    <form action="#" method="post" >
+        <table border="0" class="container">
+            <tr>
+                <td colspan="3">
+                    <a href="#">Click here for Important Points to be noted</a>
+                    <div class="mandatory" style="float: right;">*Mandatory Field</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="header">First Name *</td>
+                <td><input type="text" name="firstName" required placeholder="Name"></td>
+                <td class="max-chars">(Maximum 35 Characters)</td>
+            </tr>
+            
+            <tr>
+                <td class="header">Confirm First Name *</td>
+                <td><input type="text" name="confirmFirstName" required placeholder="Re-enter Name"></td>
+                <td class="max-chars">(Maximum 35 Characters)</td>
+            </tr>
+            
+            <tr>
+                <td class="header">Middle Name</td>
+                <td><input type="text" name="middleName" placeholder="enter Middle Name"></td>
+                <td class="max-chars">(Maximum 35 Characters)</td>
+            </tr>
+            
+            <tr>
+                <td class="header">Confirm Middle Name</td>
+                <td><input type="text" name="confirmMiddleName" placeholder="Re-enter Middle Name"></td>
+                <td class="max-chars">(Maximum 35 Characters)</td>
+            </tr>
+            
+            <tr>
+                <td class="header">Last Name *</td>
+                <td><input type="text" name="lastName" required></td>
+                <td class="max-chars">(Maximum 35 Characters)</td>
+            </tr>
+            
+            <tr>
+                <td class="header">Confirm Last Name *</td>
+                <td><input type="text" name="confirmLastName" required></td>
+                <td class="max-chars">(Maximum 35 Characters)</td>
+            </tr>
+            
+            <tr>
+                <td class="header">Full Name</td>
+                <td colspan="2">
+                    <div class="note">
+                        The Name entered in the online application form should match exactly with the requisite documents (photo ID etc.) to be produced at the time of the examination and interview. You will be disbarred from the selection process, if there is any discrepancy (difference) in the name entered by you in the online application form and the name printed in the documents produced at the time of examination/ interview. However only 35 characters will be visible for your full name. Any request for subsequent changes/consideration regarding any changes will not be entertained.
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="header">Mobile No. *</td>
+                <td><input type="text" name="mobile" value="+91" maxlength="13" required></td>
+                <td>(10 digits) Please Do not prefix zero (0)</td>
+            </tr>
+            
+            <tr>
+                <td class="header">Confirm Mobile No. *</td>
+                <td><input type="text" name="confirmMobile" value="+91" maxlength="13" required></td>
+                <td>(10 digits) Please Do not prefix zero (0)</td>
+            </tr>
+            
+            <tr>
+                <td class="header">Alternative Number</td>
+                <td><input type="text" name="altMobile" value="+91" maxlength="13"></td>
+                <td>(10 digits) Please Do not prefix zero (0)</td>
+            </tr>
+            
+            <tr>
+                <td class="header">Email ID *</td>
+                <td colspan="2">
+                    <input type="email" name="email" required>
+                    <select name="domain">
+                        <option>@gmail.com</option>
+                        <option>@yahoo.com</option>
+                    </select>
+                    <span class="max-chars">(Maximum 60 Characters)</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="header">Confirm Email ID *</td>
+                <td colspan="2">
+                    <input type="email" name="confirmEmail" required>
+                    <span class="max-chars">(Maximum 60 Characters)</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="header">Security Code *</td>
+                <td>
+                    <input type="text" name="captcha" required>
+                    <img src="Capatcha.png" alt="CAPTCHA" id="Cap">
+                </td>
+                <td>Enter the Word in the textbox as in the image</td>
+            </tr>
+            <div>
+            <tr >
+                <td id="submit" colspan="3" align="center">
+                <input type="submit" name="submit">
+            </td>
+
+            </tr>
+        </div>
+        </table>
+    </form>
+</body>
+</html>
