@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fetchData(url, callback) {
+  console.log(`Fetching data from ${url}...`);
+
+  setTimeout(() => {
+    // Simulate error occurrence with a 50% probability
+    const isError = Math.random() > 0.5;
+
+    if (isError) {
+      callback("Error: Failed to fetch data", null);
+    } else {
+      const response = `Data received from ${url}`;
+      callback(null, response);
+    }
+  }, 2000); // Simulate a 2-second delay
+}
+
+// Call fetchData and handle errors gracefully
+fetchData("https://api.example.com", (error, response) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(response);
+  }
+});
+// Output will vary depending on whether an error occurs or not
+
+    </script>
+</body>
+</html>

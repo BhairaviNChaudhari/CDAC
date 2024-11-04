@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fetchData(url, callback) {
+  console.log(`Fetching data from ${url}...`);
+  setTimeout(() => {
+    const response = `Data received from ${url}`;
+    callback(response);
+  }, 2000); // Simulates a 2-second delay
+}
+
+fetchData("https://api.example.com", (response) => {
+  console.log(response);
+});
+    </script>
+</body>
+</html>
