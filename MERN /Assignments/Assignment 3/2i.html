@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #c1c1e1;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            color: #130f0f;
+        }
+
+        #infoForm {
+            background-color: #f6eeee;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #610202;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #458fa0;
+            color: white;
+            font-size: 16px;
+        }
+        #result {
+            background-color: rgb(141, 141, 155);
+            color: #f6f4f4;
+            font-size: 16px;
+            padding: 10px;
+            margin-top: 20px;
+            width: 500px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+            white-space: pre-line; 
+        }
+        h2 {
+        color: #333;
+    }
+    #dropdownList {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 300px;
+        margin: 10px 0;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    #btn {
+        padding: 10px 15px;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #42beda;
+        border: none;
+        width: 0px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #btn:hover {
+        background-color: #2c9cc9;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Personal Information Form</h1>
+    <form id="infoForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br>
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName"><br>
+        
+        <label for="contactNo">Contact No.:</label>
+        <input type="text" id="contactNo" name="contactNo"><br>
+        
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email"><br>
+        
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <h3>Submitted Information:</h3>
+    <p id="result"></p>
+
+
+
+    
+</style>
+</head>
+<body>
+
+<h2>Dropdown List</h2>
+<select id="dropdownList">
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="cherry">Cherry</option>
+    <option value="date">Date</option>
+</select>
+<div>
+<button onclick="removeSelectedItem()" id="btn">Remove Selected Item</button>
+</div>
+<script>
+    function removeSelectedItem() {
+        const dropdown = document.getElementById('dropdownList');
+        dropdown.remove(dropdown.selectedIndex);
+    }
+</script>
+
+
+    <script>
+        function submitForm() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const contactNo = document.getElementById('contactNo').value;
+            const email = document.getElementById('email').value;
+
+            document.getElementById('result').innerText = 
+                `First Name: ${firstName}\nLast Name: ${lastName}\nContact No.: ${contactNo}\nEmail ID: ${email}`;
+        }
+
+    </script>
+
+</body>
+</html>
