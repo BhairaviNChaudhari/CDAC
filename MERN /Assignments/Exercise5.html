@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function processData(data, callback) {
+  console.log("Processing data...");
+  setTimeout(() => {
+    const processedData = `${data} - Processed`;
+    callback(processedData);
+  }, 1000); // Simulate 1-second processing delay
+}
+
+fetchData("https://api.example.com", (error, response) => {
+  if (error) {
+    console.log(error);
+  } else {
+    processData(response, (processedResult) => {
+      console.log(processedResult);
+    });
+  }
+});
+// Output will vary. If no error:
+// "Fetching data from https://api.example.com..."
+// "Processing data..."
+// "Data received from https://api.example.com - Processed"
+
+    </script>
+</body>
+</html>
